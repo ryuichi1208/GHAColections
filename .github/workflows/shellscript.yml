@@ -1,0 +1,12 @@
+name: ShellScript Lint
+on: [push]
+
+jobs:
+  build:
+    name: ShellScript Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: |
+        apt-get update
+        apt-get install shellcheck
