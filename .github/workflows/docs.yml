@@ -27,4 +27,4 @@ jobs:
           pip install --user yamllint
       - name: Lint YAML
         run: |
-          yamlint --version
+          python -m yamllint --version
