@@ -10,3 +10,6 @@ jobs:
       - run: |
           sudo apt-get update
           sudo apt-get install shellcheck
+          /bin/bash --version
+          shellcheck --version
+          find . -name *.sh | xargs -L 1 shellcheck
