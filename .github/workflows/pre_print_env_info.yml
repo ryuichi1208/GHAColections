@@ -2,20 +2,20 @@ name: Print Info
 
 on:
   push:
-    branches: 
+    branches:
       - master
       - release/**
   pull_request:
-    branches: 
+    branches:
       - master
     types: [opend, reopend, labeled, unlabeled]
   schedule:
     - cron: '0 0 * * *'
-      
+
 env:
   EXTRA_PARH: /
   DEBUG: true
-  
+
 jobs:
   print_env_info:
     runs-on: [ubuntu-18.04]
