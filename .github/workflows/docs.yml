@@ -34,6 +34,7 @@ jobs:
           sudo apt-get update
           pip install --user yamllint
           npm install markdownlint markdownlint-cli --save-dev
+          npm install -g markdown-link-check
 
       - name: Lint YAML
         run: |
@@ -43,3 +44,5 @@ jobs:
       - name: Lint Markdown
         run: |
           stat ./node_modules/.bin/markdownlint
+          ./node_modules/.bin/markdownlint ./docs/test.md
+          markdown-link-check ./docs/test.md
