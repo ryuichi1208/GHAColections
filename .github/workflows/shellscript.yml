@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          apt-get update
-          apt-get install shellcheck
+          sudo apt-get update
+          sudo apt-get install shellcheck
